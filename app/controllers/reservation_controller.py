@@ -14,7 +14,7 @@ reservation_bp = Blueprint("reservation", __name__)
 @roles_required(roles=["admin", "customer"])
 def get_products():
     reservations = Reservation.get_all()
-    return jsonify(render_product_list(reservations))
+    return jsonify(render_reservation_list(reservations))
 
 
 #Ruta para obtener un reservacion especifico por id 
